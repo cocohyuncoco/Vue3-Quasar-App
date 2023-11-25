@@ -1,6 +1,12 @@
 <template>
-    <div class="text-h4">
-Home
+    <div >
+        <div class="text-h4">
+            home
+        </div>
+        <div>
+            {{ $route.name }} <br>
+            {{ $route.meta }}
+        </div>
     </div>
 </template>
 
@@ -13,3 +19,9 @@ Home
 <style lang="scss" scoped>
 
 </style>
+
+<route lang="yaml">
+    name : home-page
+    meta : 
+        requiresAuth : true
+</route>
