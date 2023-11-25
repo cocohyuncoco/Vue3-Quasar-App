@@ -82,7 +82,16 @@ module.exports = configure(function (/* ctx */) {
 
       vitePlugins: [
         ['unplugin-vue-router/vite', {
-          exclude: ['**/components/**']
+          exclude: ['**/components/**'],
+          routesFolder: [
+            {
+              src: 'src/pages'
+            },
+            {
+              src: 'src/docs',
+              path: 'docs/'
+            },
+          ]
         }]
       ]
     },
